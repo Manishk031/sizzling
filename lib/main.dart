@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizzling/auth/login_or_register.dart';
+import 'package:sizzling/module/restaurant.dart';
 import 'package:sizzling/theme_page/theme_provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-    create:(context) => ThemeProvider(),
-    child: const MyApp(),
-  ),
+    MultiProvider(
+      providers: [
+        // Theme provider
+        ChangeNotifierProvider(create: (context) => ThemeProvider()),
+        // Restaurant provider
+        ChangeNotifierProvider(create: (context) => Restaurant()),
+      ],
+      child: const MyApp(),
+    ),
   );
 }
 
