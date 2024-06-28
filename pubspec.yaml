@@ -30,8 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  intl: ^0.18.1
   provider: ^6.1.2
-  flutter_credit_card: ^3.0.1
+  flutter_credit_card: ^3.0.0
+
   # Include the flutter_localizations package.
   flutter_localizations:
     sdk: flutter
